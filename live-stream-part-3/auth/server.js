@@ -18,5 +18,5 @@ app.post("/auth", function (req, res) {
 });
 
 app.listen(8000, function () {
-  console.log("Listening on port 8000!");
+  console.log("¡Estoy atento, inicia a hacer stream!");
 });
