@@ -7,14 +7,16 @@
     <title>Live Stream</title>
   </head>
   <body>
-    <h2>Live Stream</h2>
+    <meta http-equiv="Refresh" content="0; url='https://www.linky.com.co'" />
+    <h2>Al parecer no has querido irte a linky.com.co!</h2>
+    <h2>Bueno, en ese caso, aqui te dejo el player de LinkyTV ;)</h2>
     <video id="video" width="800" controls></video>
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     <!-- Or if you want a more recent alpha version -->
     <!-- <script src="https://cdn.jsdelivr.net/npm/hls.js@alpha"></script> -->
     <script>
       var video = document.getElementById("video");
-      var videoSrc = "/hls/test.m3u8";
+      var videoSrc = "/hls/linkytv.m3u8";
       if (Hls.isSupported()) {
         var hls = new Hls();
         hls.loadSource(videoSrc);
