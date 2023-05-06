@@ -1,43 +1,45 @@
+
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>StreamingServer by Linky</title>
-  </head>
-  <body>
-    <meta http-equiv="Refresh" content="0; url='https://www.linky.com.co'" />
-    <h2>Al parecer no has querido irte a linky.com.co!</h2>
-    <h2>Bueno, en ese caso, aqui te dejo el player de LinkyTV ;)</h2>
-    <video id="video" width="800" controls></video>
-    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-    <!-- Or if you want a more recent alpha version -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/hls.js@alpha"></script> -->
-    <script>
-      var video = document.getElementById("video");
-      var videoSrc = "/hls/linkytv.m3u8";
-      if (Hls.isSupported()) {
-        var hls = new Hls();
-        hls.loadSource(videoSrc);
-        hls.attachMedia(video);
-      }
-      // hls.js is not supported on platforms that do not have Media Source
-      // Extensions (MSE) enabled.
-      //
-      // When the browser has built-in HLS support (check using `canPlayType`),
-      // we can provide an HLS manifest (i.e. .m3u8 URL) directly to the video
-      // element through the `src` property. This is using the built-in support
-      // of the plain video element, without using hls.js.
-      //
-      // Note: it would be more normal to wait on the 'canplay' event below however
-      // on Safari (where you are most likely to find built-in HLS support) the
-      // video.src URL must be on the user-driven white-list before a 'canplay'
-      // event will be emitted; the last video event that can be reliably
-      // listened-for when the URL is not on the white-list is 'loadedmetadata'.
-      else if (video.canPlayType("application/vnd.apple.mpegurl")) {
-        video.src = videoSrc;
-      }
-    </script>
-  </body>
+<html dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="1.4.9">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="https://us-east-1.tixte.net/uploads/linky.likes.cash/ACL-logo.png">
+    <title>La Antena Comunitaria de Linky - Streaming Panel</title>
+    <!-- Custom CSS -->
+    <style type="text/css">
+    .body {
+        background: url('https://images.unsplash.com/photo-1620121692029-d088224ddc74?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format') no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        -o-background-size: cover;
+    }
+    </style>
+    <link href="https://stream.ichibantv.com/dashboard/dist/css/style.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <div class="auth-wrapper d-flex no-block justify-content-center align-items-center body">
+            <div class="auth-box">
+                <div class="logo">
+                    <span class="db"><br><br><img style="width:150px;margin-bottom: 20px;" src="https://us-east-1.tixte.net/uploads/linky.likes.cash/ACL-logo.png" alt="logo" /><br>La Antena Comunitaria de Linky - Servidor<br><br></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://stream.ichibantv.com/dashboard/assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="https://stream.ichibantv.com/dashboard/assets/libs/popper.js/dist/umd/popper.min.js"></script>
+    <script src="https://stream.ichibantv.com/dashboard/assets/libs/bootstrap/dist/js/bootstrap.min.js"></script>
+
+</body>
+
 </html>
